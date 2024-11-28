@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> <!--links connecting CSS and making icons, py-script and bootstrap work in website.-->
+	<title>Happy Birthday Grampa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="mystylesheet.css">
+</head>
+
+<body>
+
+	<div class="birthday-card">
+		<!-- Inner -->
+		<div class="inner-cover">
+			<div class="slideshow-container">
+
+				<div class="mySlides">
+				  <img src="images/slideshow_image1.jpg">
+				</div>
+
+				<div class="mySlides">
+				  <img src="images/slideshow_image2.jpg">
+				</div>
+
+				<div class="mySlides">
+				  <img src="images/slideshow_image3.jpg">
+				</div>
+				
+				<div class="mySlides">
+				  <img src="images/slideshow_image5.jpg">
+				</div>
+			</div>
+		</div>
+	
+	
+	
+		<!-- Outer -->
+		<div class="front-cover">
+			<img src="images/grampa_birthday_frontcover.jpg" width="100%">
+		</div>
+		
+
+		
+		<!-- Text -->
+		<div class="text">
+			<p class="title">
+			Happy Birthday <br> Grampa!
+			</p>
+			<p>
+			We love you so much and hope you have an amazing day!
+			</p>
+			<p>
+			Love Emme, Susie, Rachel and Ian!
+			</p>
+		</div>
+	</div>
+	
+	
+	<!--Script for changing the slides in the slideshow. -->
+	<script>
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() { // Function to change through slides 
+	  let index;
+	  let slides = document.getElementsByClassName("mySlides");
+	  for (index = 0; index < slides.length; index++) {
+		slides[index].style.display = "none";  // Current picture dissappears
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1} 
+
+	  slides[slideIndex-1].style.display = "block";   // Shows next picture 
+
+	  setTimeout(showSlides, 3000); // Change image every 3 seconds
+	}
+	</script>
+
+</body>
+</html>
